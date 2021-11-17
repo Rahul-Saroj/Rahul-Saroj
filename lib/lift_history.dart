@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:untitled/tab_bar.dart';
 
 import 'constFile/text_style.dart';
 import 'global_widget/custom_lift_widget.dart';
@@ -18,6 +19,7 @@ class LiftHistory extends StatelessWidget {
       ),
       body: Column(
         children: <Widget> [
+          TabBarWidget(),
           Expanded(child: CustomLift( title : 'Ji Tirto Utomo No 41' , isLift : true)),
         ],
       ),

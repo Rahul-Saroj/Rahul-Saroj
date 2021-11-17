@@ -6,10 +6,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:untitled/settings.dart';
+import 'package:untitled/sign_up_page.dart';
+import 'package:untitled/signup_stateful.dart';
 import 'package:untitled/tab_bar.dart';
 import 'package:untitled/where_to_go.dart';
 import 'lift_history.dart';
+import 'my_vehicle.dart';
+import 'no_of_passengers.dart';
 import 'notification_page.dart';
+import 'notification_rider.dart';
 
 class Todo {
   final String title;
@@ -29,8 +34,9 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ScreenUtilInit(
-      designSize: Size(320,1280),
+    return MaterialApp(debugShowCheckedModeBanner: false,home:MyVehicle() ,);
+      ScreenUtilInit(
+      // designSize: Size(320,1280),
       builder: () => MaterialApp(
 
         locale: DevicePreview.locale(context),
@@ -39,10 +45,10 @@ class MyApp extends StatelessWidget {
           fontFamily: 'Inter',
           brightness: Brightness.light,
           primaryColor: Colors.purpleAccent,
-          colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.green)
-              .copyWith(secondary: Color(0xff0072B0)),
+          // colorScheme: ColorScheme.fromSwatcsh(primarySwatch: Colors.green)
+          //     .copyWith(secondary: Color(0xff0072B0)),
         ),
-        home:  NotificationPage(),
+        home:  MyVehicle(),// CALL KROO
         // RoutingWithDataPassing(
         //   todos : List.generate(20, (index) => Todo('Welcome $index', 'Hello Ibyte@infomatics$index')),
         // ),
