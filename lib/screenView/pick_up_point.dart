@@ -9,22 +9,21 @@ class PickUpPoints extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(elevation: 0.0),
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Expanded(
-              flex: 1,
-              child: Container(
-                color: KColors.MAPCOLOR,
-              ),
+      body: Column(
+        children: [
+          Expanded(
+            child: Container(
+              color: KColors.MAPCOLOR,
             ),
-            SizedBox(
-              height: 20,
-            ),
-            Expanded(
-              flex: 2,
-              child: Padding(
-                padding: EdgeInsets.all(8),
+          ),
+          SizedBox(
+            height: 20,
+          ),
+          Expanded(
+
+            child: Padding(
+              padding: EdgeInsets.all(8),
+              child: SingleChildScrollView(
                 child: Column(
                   children: [
                     Container(
@@ -57,19 +56,6 @@ class PickUpPoints extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: 20,),
-                    // Expanded(
-                    //   child: ListView.builder(
-                    //     shrinkWrap: true,
-                    //     itemCount: 10,
-                    //     itemBuilder: (context, index) => Column(
-                    //       children: const [
-                    //         NewWidgetListTile( leading :'Pick Up Point', trailing: 'Ikeja City Mall'),
-                    //         Divider(),
-                    //       ],
-                    //     ),
-                    //   ),
-                    // ),
-
                     NewWidgetListTile(
                         leading: 'Pick Up Point', trailing: 'Ikeja City Mall'),
                     Divider(),
@@ -78,32 +64,12 @@ class PickUpPoints extends StatelessWidget {
                     Divider(),
                     NewWidgetListTile(
                         leading: 'Pick Up Point 2', trailing: 'Penta Square'),
-                    Spacer(),
-                    Container(
-                      height: 51,
-                      width: 311,
-                      decoration: const BoxDecoration(
-                        color: Color(0xff0072B0),
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(8),
-                        ),
-                      ),
-                      child: const Center(
-                        child: Text(
-                          'Add Pick Up Point',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                    ),
                   ],
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
